@@ -1,18 +1,17 @@
 #!/usr/bin/python
 import sys
-import smtplib
-from email.mime.image import MIMEImage
-from email.mime.multipart import MIMEMultipart
 import time
+from classes.myemail import MyEmail
 
 def main():
-    msg = MIMEMultipart()
-    msg['Subject'] = 'Today\'s XKCD Comic!'
 
+    attachment = sys.argv[1]
+    to_email = ['connor.runyan@aggiemail.usu.edu']
+    content = 'THIS IS A TEST'
 
-def getTime():
-    return time.strftime('%A, %B %d %Y')
-
+    mail = MyEmail()
+    mail.setEmail(to_email, content)
+    mail.sendEmail()
 
 if __name__ == '__main__':
     main()
