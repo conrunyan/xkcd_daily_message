@@ -3,6 +3,7 @@ import sys
 import time
 from classes.myemail import MyEmail
 
+
 def main():
 
     attachment = sys.argv[1]
@@ -21,6 +22,7 @@ def main():
 def getTime():
     '''Return date and time now.'''
     return time.strftime('%c')
+
 
 if __name__ == '__main__':
     main()
