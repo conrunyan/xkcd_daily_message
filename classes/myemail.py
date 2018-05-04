@@ -35,4 +35,8 @@ class MyEmail():
         self.msg['To'] = ', '.join(mail_to)
         self.msg.preamble = content
 
+    def setSubject(self, subject):
+        '''Sets the subject of the message'''
+        self.msg['Subject'] = subject
+
 
