@@ -12,4 +12,4 @@ wget -O $img_name $img_url
 # delete old comic (for testing move to hold_comic)
 rm -f $new_comic_dir*
 # move comic to new_comic dir
-mv $1 $new_comic_dir
+mv $img_name $new_comic_dir
