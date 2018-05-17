@@ -8,7 +8,7 @@ img_url=`curl -sq "$xkcd_url" | python -c "import json, sys; print (json.load(sy
 img_name=`echo $img_url | grep -Eo "\w+.png\$"`
 wget -O $img_name $img_url
 # delete old comic (for testing move to hold_comic)
-rm -f "$new_comic_dir*"
+rm -f $new_comic_dir*
 # move comic to new_comic dir
 mv -f $img_name $new_comic_dir
 echo "${new_comic_dir}${img_name}"
