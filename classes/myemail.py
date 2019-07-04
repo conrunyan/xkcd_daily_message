@@ -22,7 +22,7 @@ class MyEmail():
         '''Send email with configured contents'''
         smtp = smtplib.SMTP('smtp.gmail.com:587')
         smtp.starttls()
-        smtp.login('noreply.hhhippo@gmail.com', 'Hungry4evr')
+        smtp.login(<EMAIL_HERE>, <PASSWORD_HERE>)
         mail_to = self.msg['To']
         mail_from = self.msg['From']
         message = self.msg.as_string()
